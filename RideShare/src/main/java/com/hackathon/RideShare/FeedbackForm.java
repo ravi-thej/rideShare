@@ -1,9 +1,13 @@
 package com.hackathon.RideShare;
 
-import java.util.List;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
+@Document(collection="feedback")
 public class FeedbackForm {
 	
+	@Id
+	private String id;
 	private String feedBack;
 	private String comments;
 	

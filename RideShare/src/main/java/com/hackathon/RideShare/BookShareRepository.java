@@ -10,4 +10,6 @@ import org.springframework.stereotype.Repository;
 public interface BookShareRepository extends 
 MongoRepository<UserRequestDetails, String> {
 
+	void feedack(FeedbackForm feedback);
+
 }

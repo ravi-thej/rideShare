@@ -49,8 +49,8 @@ public class BookShareRide {
 		LOGGER.debug("start of feedback  method");
 		ResponseEntity<FeedbackForm> response = null;
 		try {
-			shareRepository.save(feedback);
-			response = new ResponseEntity<FeedbackForm>(result, HttpStatus.CREATED);
+			shareRepository.feedack(feedback);
+			response = new ResponseEntity<FeedbackForm>(HttpStatus.CREATED);
 		} catch (Exception e) {
 			LOGGER.error("Exception occured in bookShare method :" + e.getMessage());
 			response = new ResponseEntity<FeedbackForm>(HttpStatus.NOT_FOUND);
